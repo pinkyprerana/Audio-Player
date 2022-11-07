@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Audio player</title>
+<style>
+
+body
+{
+background-color: pink;
+}
+*{
+	margin:0px;
+	padding:0px;
+}
+nav{
+	font-family:arial;
+}
+nav ul{
+	display: flex;
+	list-style-type: none;
+	background-color: black;
+	height: 65px;
+	color: white;
+}
+
+
+nav ul li{
+	padding: 0 10px;
+	margin:20px;
+	
+	
+}
+
+nav ul li a{
+	
+	color:white;
+}
+
+.brand img{
+	width: 44px;
+	padding: 0 8px;
+}
+
+.brand{
+	display: flex;
+	align-items: center;
+	font-weight: bolder;
+	font-size:1.3rem;
+	
+}
+
+h1{
+  text-shadow:5px 5px 10px pink;
+}
+
+.container{
+	min-height:70vh;
+	background-color:black;
+	color:white;
+	font-family:'varela round', sans-serif;
+	display:flex;
+	width:70%;
+	height:700px;
+	margin: 23px auto;
+	border-radius: 5px;
+	background-image: url("girl.jpg");
+}
+.songItems{
+	height:50px;
+	width:50%;
+	display:flex;
+	background-color: white;
+	color:black;
+	margin-top: 100px;
+  margin-right:500px;
+	padding:0 10px;
+	justify-content: space-between;
+	align-items:center;
+	border-radius:34px;
+	
+}
+
+.songItems img{
+	width: 43px;
+	margin: 0 2px;
+	border-radius:20%;
+	
+}
+
+.songInfo img{
+	opacity:1;
+	height:100px;
+	width: 300px;
+	transition: 0.2;
+}
+
+</style>
+ </head>
+ <body>
+    <nav>
+    <ul>
+        <li class="brand"><img src="logo.png"alt="Spotify">Spotify</li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+    </ul>
+    </nav>
+
+    <audio id="myAudio">
+      <source src="1.mp3" type="audio/mp3">
+      <source src="1.mp3" type="audio/mp3">
+    </audio>
+    
+
+  <div class="container">
+    <h1>Best of Bollywood</h1>
+    <div class="songItems">
+    <img src="cover1.jpg" alt="Khairiyat">Khairiyat
+    <i class="far fa-play-circle" onclick="playAudio()"></i>
+    <i class="far fa-pause-circle" onclick="pauseAudio()"></i>
+    </div>
+  </div>
+  <div class="songInfo">
+      <img src="play.gif"width="42px" alt="Play" id="gif">
+    </div>
+        
+  
+
+
+<script>
+
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+
+</script>
+<script src="https://kit.fontawesome.com/ea0da3b216.js" crossorigin="anonymous"></script>
+</body>
+</html>
